@@ -1,0 +1,2 @@
+# blueprints
+WordPress Playground Blueprints
