@@ -1,5 +1,5 @@
 {
-  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
 		"title": "Elementor WooCommerce Boilerplate",
 		"description": "An Elementor site with Hello theme, content, and products.",
@@ -14,16 +14,16 @@
 	"features": {
 		"networking": true
 	},
-  "steps": [
-    {
+	"steps": [
+		{
 			"step": "resetData"
 		},
-    {
+		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/mu-plugins/rewrite.php",
 			"data": "<?php /* Use pretty permalinks */ add_action( 'after_setup_theme', function() { global $wp_rewrite; $wp_rewrite->set_permalink_structure('/%postname%/'); $wp_rewrite->flush_rules(); } );"
 		},
-    {
+		{
 			"step": "setSiteOptions",
 			"options": {
 				"blogname": "Elementor WooCommerce Boilerplate",
@@ -43,7 +43,7 @@
 				}
 			}
 		},
-    {
+		{
 			"step": "installPlugin",
 			"pluginZipFile": {
 				"resource": "wordpress.org/plugins",
@@ -53,7 +53,7 @@
 				"activate": true
 			}
 		},
-    {
+		{
 			"step": "installPlugin",
 			"pluginZipFile": {
 				"resource": "wordpress.org/plugins",
@@ -63,7 +63,7 @@
 				"activate": true
 			}
 		},
-    {
+		{
 			"step": "installTheme",
 			"themeZipFile": {
 				"resource": "wordpress.org/themes",
@@ -73,11 +73,11 @@
 				"activate": false
 			}
 		},
-    {
+		{
 			"step": "mkdir",
 			"path": "/wordpress/wp-content/themes/hello-theme-child"
 		},
-    {
+		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/themes/hello-theme-child/styles.css",
 			"data": {
@@ -85,7 +85,7 @@
 				"url": "https://raw.githubusercontent.com/elementor/hello-theme-child/master/style.css"
 			}
 		},
-    {
+		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/themes/hello-theme-child/readme.txt",
 			"data": {
@@ -93,7 +93,7 @@
 				"url": "https://raw.githubusercontent.com/elementor/hello-theme-child/master/readme.txt"
 			}
 		},
-    {
+		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/themes/hello-theme-child/functions.php",
 			"data": {
@@ -101,7 +101,7 @@
 				"url": "https://raw.githubusercontent.com/elementor/hello-theme-child/master/functions.php"
 			}
 		},
-    {
+		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/themes/hello-theme-child/screenshot.png",
 			"data": {
@@ -109,14 +109,14 @@
 				"url": "https://raw.githubusercontent.com/elementor/hello-theme-child/master/screenshot.png"
 			}
 		},
-    {
+		{
 			"step": "activateTheme",
 			"themeFolderName": "hello-theme-child"
 		},
-    {
+		{
 			"step": "login",
 			"username": "admin",
 			"password": "password"
-		}
-  ],
+		},
+	]
 }
